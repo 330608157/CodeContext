@@ -6,10 +6,16 @@ group 'com.codecontext'
 version '1.0-SNAPSHOT'
 
 repositories {
+    maven {
+        url = 'http://maven.aliyun.com/nexus/content/groups/public'
+    }
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
+    compile "net.bytebuddy:byte-buddy:1.10.20"
+    compile "net.bytebuddy:byte-buddy-agent:1.10.20"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
